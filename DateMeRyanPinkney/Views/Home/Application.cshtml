@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Dating Application";
+}
+
+<!--Bring in the model-->
+@model DateMeRyanPinkney.Models.Application
+
+<div>
+
+
+    <form method="POST">
+        <label asp-for="sFirstName">First Name:</label>
+        <input asp-for="sFirstName" /><br />
+
+        <label asp-for="sLastName">Last Name:</label>
+        <input asp-for="sLastName" /><br />
+
+        <label asp-for="iAge">Age:</label>
+        <input asp-for="iAge" /><br />
+
+        <label asp-for="iPhoneNumber">Phone:</label>
+        <input asp-for="iPhoneNumber" /><br />
+
+        <label asp-for="sMajor">Major:</label>
+        <input asp-for="sMajor" /><br />
+
+        <label asp-for="bIsStocker">Are you a stocker?:</label>
+        <select asp-for="bIsStocker">
+
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+
+        </select><br />
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+</div>

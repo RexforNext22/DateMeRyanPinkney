@@ -1,0 +1,20 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Success!";
+}
+
+<!--Bring in the model-->
+@model DateMeRyanPinkney.Models.Application
+<!--Eliminate the stockers-->
+@if (Model.bIsStocker == true)
+{
+    <h2>My bad. I am in a relationship.</h2>
+}
+else
+{
+
+    <h2>Application Recieved! Thank you, @Model.sFirstName @Model.sLastName</h2>
+    <h3>Expect a response in 3-6 months.</h3>
+}
